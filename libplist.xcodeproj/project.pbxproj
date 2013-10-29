@@ -26,6 +26,13 @@
 		ED7F5CA21820225700AA51F1 /* Structure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED7F5C481820215C00AA51F1 /* Structure.cpp */; };
 		ED7F5CA31820225700AA51F1 /* Uid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED7F5C491820215C00AA51F1 /* Uid.cpp */; };
 		ED7F5CA41820225700AA51F1 /* xplist.c in Sources */ = {isa = PBXBuildFile; fileRef = ED7F5C4A1820215C00AA51F1 /* xplist.c */; };
+		EDD2EAAF1820694E00EDFCE2 /* cnary.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD2EAA91820694E00EDFCE2 /* cnary.c */; };
+		EDD2EAB01820694E00EDFCE2 /* iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD2EAAA1820694E00EDFCE2 /* iterator.c */; };
+		EDD2EAB11820694E00EDFCE2 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD2EAAB1820694E00EDFCE2 /* list.c */; };
+		EDD2EAB21820694E00EDFCE2 /* node_iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD2EAAC1820694E00EDFCE2 /* node_iterator.c */; };
+		EDD2EAB31820694E00EDFCE2 /* node_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD2EAAD1820694E00EDFCE2 /* node_list.c */; };
+		EDD2EAB41820694E00EDFCE2 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD2EAAE1820694E00EDFCE2 /* node.c */; };
+		EDD2EAB618206B0400EDFCE2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD2EAB518206B0400EDFCE2 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +63,13 @@
 		ED7F5C491820215C00AA51F1 /* Uid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Uid.cpp; sourceTree = "<group>"; };
 		ED7F5C4A1820215C00AA51F1 /* xplist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = xplist.c; sourceTree = "<group>"; };
 		ED85A73A18201F74005ECF96 /* liblibplist.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = liblibplist.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD2EAA91820694E00EDFCE2 /* cnary.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cnary.c; path = libcnary/cnary.c; sourceTree = "<group>"; };
+		EDD2EAAA1820694E00EDFCE2 /* iterator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = iterator.c; path = libcnary/iterator.c; sourceTree = "<group>"; };
+		EDD2EAAB1820694E00EDFCE2 /* list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = list.c; path = libcnary/list.c; sourceTree = "<group>"; };
+		EDD2EAAC1820694E00EDFCE2 /* node_iterator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = node_iterator.c; path = libcnary/node_iterator.c; sourceTree = "<group>"; };
+		EDD2EAAD1820694E00EDFCE2 /* node_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = node_list.c; path = libcnary/node_list.c; sourceTree = "<group>"; };
+		EDD2EAAE1820694E00EDFCE2 /* node.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = node.c; path = libcnary/node.c; sourceTree = "<group>"; };
+		EDD2EAB518206B0400EDFCE2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = /usr/lib/libxml2.dylib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD2EAB618206B0400EDFCE2 /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				ED85A73B18201F74005ECF96 /* Products */,
+				EDD2EAA81820692B00EDFCE2 /* libcnary */,
 				ED7F5C301820215C00AA51F1 /* src */,
+				EDD2EAB518206B0400EDFCE2 /* libxml2.dylib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +133,19 @@
 				ED85A73A18201F74005ECF96 /* liblibplist.dylib */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EDD2EAA81820692B00EDFCE2 /* libcnary */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2EAA91820694E00EDFCE2 /* cnary.c */,
+				EDD2EAAA1820694E00EDFCE2 /* iterator.c */,
+				EDD2EAAB1820694E00EDFCE2 /* list.c */,
+				EDD2EAAC1820694E00EDFCE2 /* node_iterator.c */,
+				EDD2EAAD1820694E00EDFCE2 /* node_list.c */,
+				EDD2EAAE1820694E00EDFCE2 /* node.c */,
+			);
+			name = libcnary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,22 +210,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED7F5CA41820225700AA51F1 /* xplist.c in Sources */,
+				EDD2EAB01820694E00EDFCE2 /* iterator.c in Sources */,
 				ED7F5C961820225700AA51F1 /* bytearray.c in Sources */,
 				ED7F5C931820225700AA51F1 /* base64.c in Sources */,
 				ED7F5CA11820225700AA51F1 /* String.cpp in Sources */,
+				EDD2EAB31820694E00EDFCE2 /* node_list.c in Sources */,
 				ED7F5C9C1820225700AA51F1 /* Key.cpp in Sources */,
+				EDD2EAAF1820694E00EDFCE2 /* cnary.c in Sources */,
 				ED7F5C9E1820225700AA51F1 /* plist.c in Sources */,
 				ED7F5C9D1820225700AA51F1 /* Node.cpp in Sources */,
 				ED7F5C9B1820225700AA51F1 /* Integer.cpp in Sources */,
 				ED7F5C9F1820225700AA51F1 /* ptrarray.c in Sources */,
 				ED7F5C941820225700AA51F1 /* Boolean.cpp in Sources */,
+				EDD2EAB21820694E00EDFCE2 /* node_iterator.c in Sources */,
 				ED7F5C971820225700AA51F1 /* Data.cpp in Sources */,
+				EDD2EAB41820694E00EDFCE2 /* node.c in Sources */,
 				ED7F5CA21820225700AA51F1 /* Structure.cpp in Sources */,
 				ED7F5CA01820225700AA51F1 /* Real.cpp in Sources */,
 				ED7F5CA31820225700AA51F1 /* Uid.cpp in Sources */,
 				ED7F5C981820225700AA51F1 /* Date.cpp in Sources */,
 				ED7F5C9A1820225700AA51F1 /* hashtable.c in Sources */,
 				ED7F5C991820225700AA51F1 /* Dictionary.cpp in Sources */,
+				EDD2EAB11820694E00EDFCE2 /* list.c in Sources */,
 				ED7F5C921820225700AA51F1 /* Array.cpp in Sources */,
 				ED7F5C951820225700AA51F1 /* bplist.c in Sources */,
 			);
